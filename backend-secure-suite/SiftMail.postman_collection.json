@@ -1,0 +1,112 @@
+{
+  "info": {
+    "name": "Sift Mail Secure Suite",
+    "_postman_id": "siftmail-secure",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health (open)",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/health"
+      }
+    },
+    {
+      "name": "Auth Start (open)",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/auth/start"
+      }
+    },
+    {
+      "name": "Set Mode (shadow on)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-API-Key",
+            "value": "YOUR_KEY"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\": \"you@domain.com\", \"shadow\": true}"
+        },
+        "url": "http://localhost:8080/mode"
+      }
+    },
+    {
+      "name": "Rules Allow",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-API-Key",
+            "value": "YOUR_KEY"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\": \"you@domain.com\", \"entries\": [\"@trusted.com\", \"ceo@acme.com\"]}"
+        },
+        "url": "http://localhost:8080/rules/allow"
+      }
+    },
+    {
+      "name": "Batch Classify (dry run)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-API-Key",
+            "value": "YOUR_KEY"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\": \"you@domain.com\", \"label\": \"INBOX\", \"max_results\": 25, \"quarantine_threshold\": 0.7, \"dry_run\": true}"
+        },
+        "url": "http://localhost:8080/gmail/batch-classify"
+      }
+    },
+    {
+      "name": "Digest (JSON)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-API-Key",
+            "value": "YOUR_KEY"
+          }
+        ],
+        "url": "http://localhost:8080/digest?email=you@domain.com"
+      }
+    },
+    {
+      "name": "Audit",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-API-Key",
+            "value": "YOUR_KEY"
+          }
+        ],
+        "url": "http://localhost:8080/audit?email=you@domain.com&limit=100"
+      }
+    }
+  ]
+}

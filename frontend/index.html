@@ -1,0 +1,88 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sift Mail — AI Email Defense</title>
+  <meta name="description" content="Sift Mail kills spam, tames graymail, and explains every decision with safe, reversible quarantine.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Sift Mail logo"><span>Sift Mail</span>
+      </div>
+      <nav>
+        <a href="data-policy.html">Data Policy</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container grid">
+      <div>
+        <h1>Kill spam. Keep the good.</h1>
+        <p class="lead">Sift Mail is an AI email defense that actually cleans your inbox. Multi‑engine detection, explainable decisions, and a safe, reversible quarantine.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn" href="javascript:void(0)" onclick="connectGmail()">Connect Gmail</a>
+          <a class="btn secondary" href="#learn">Learn more</a>
+        </div>
+        <div class="kpis">
+          <div class="card"><div style="font-size:28px;font-weight:800">95%+</div><small>Spam reduction</small></div>
+          <div class="card"><div style="font-size:28px;font-weight:800">0</div><small>Permanent deletes by default</small></div>
+          <div class="card"><div style="font-size:28px;font-weight:800">1‑click</div><small>Undo & retrain</small></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Get launch updates</h3>
+        <p class="muted">Join the waitlist to be notified when Sift Mail goes GA.</p>
+        <form id="waitlist" class="form">
+          <input type="email" name="email" placeholder="you@company.com" aria-label="Email">
+          <button class="btn" type="submit">Notify me</button>
+        </form>
+        <div class="badges">
+          <span class="badge">Explainable</span>
+          <span class="badge">Reversible</span>
+          <span class="badge">LLM‑assisted</span>
+          <span class="badge">Header forensics</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="learn">
+    <div class="container">
+      <div class="features">
+        <div class="card">
+          <h3>Multi‑engine defense</h3>
+          <p class="muted">Headers, domain intel, LLM content analysis, OCR/QR, and link forensics work together to catch what default filters miss.</p>
+        </div>
+        <div class="card">
+          <h3>Explainable actions</h3>
+          <p class="muted">Every move has a reason badge (SPF/DKIM, homograph, domain age, anomaly heuristics) so users trust the system.</p>
+        </div>
+        <div class="card">
+          <h3>Reversible by default</h3>
+          <p class="muted">Nothing disappears. Messages go to a 30‑day quarantine with one‑click restore that also retrains the model.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+      <small>© 2025 Sift Mail</small>
+      <small>Contact: <a href="mailto:support@siftmail.app" class="muted">support@siftmail.app</a></small>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

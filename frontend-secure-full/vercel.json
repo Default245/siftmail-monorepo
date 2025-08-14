@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "env": {
+    "BACKEND_URL": "http://localhost:8080",
+    "SIFT_API_KEY": "<set in project>"
+  }
+}
