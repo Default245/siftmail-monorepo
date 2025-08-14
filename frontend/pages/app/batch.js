@@ -1,0 +1,1 @@
+export default function Batch(){ return <h1>Batch Classify</h1> }
