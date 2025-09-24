@@ -28,25 +28,53 @@
   <section class="hero">
     <div class="container grid">
       <div>
-        <h1>Kill spam. Keep the good.</h1>
-        <p class="lead">Sift Mail is an AI email defense that actually cleans your inbox. Multi‑engine detection, explainable decisions, and a safe, reversible quarantine.</p>
-        <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <span class="eyebrow">Seamless email platform</span>
+        <h1>Wake up to a calm inbox.</h1>
+        <p class="lead">Sift Mail orchestrates spam defense, phishing protection, smart categorization, and high-value summaries so you can action what matters in seconds.</p>
+        <ul class="hero-list">
+          <li>No spam or phishing surprises.</li>
+          <li>Every account organized into intent-based categories.</li>
+          <li>Important mail summarized the moment you open the app.</li>
+        </ul>
+        <div class="cta-row">
           <a class="btn" href="javascript:void(0)" onclick="connectGmail()">Connect Gmail</a>
           <a class="btn secondary" href="#learn">Learn more</a>
         </div>
         <div class="kpis">
-          <div class="card"><div style="font-size:28px;font-weight:800">95%+</div><small>Spam reduction</small></div>
-          <div class="card"><div style="font-size:28px;font-weight:800">0</div><small>Permanent deletes by default</small></div>
-          <div class="card"><div style="font-size:28px;font-weight:800">1‑click</div><small>Undo & retrain</small></div>
+          <div class="card">
+            <div class="kpi-number">98%</div>
+            <small>Spam and graymail filtered on day one</small>
+          </div>
+          <div class="card">
+            <div class="kpi-number">5 min</div>
+            <small>To reach inbox zero onboarding</small>
+          </div>
+          <div class="card">
+            <div class="kpi-number">Auto</div>
+            <small>Snippets for every high-value email</small>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <h3>Get launch updates</h3>
-        <p class="muted">Join the waitlist to be notified when Sift Mail goes GA.</p>
-        <form id="waitlist" class="form">
-          <input type="email" name="email" placeholder="you@company.com" aria-label="Email">
-          <button class="btn" type="submit">Notify me</button>
-        </form>
+      <div class="card hero-card">
+        <h3>Inbox snapshot</h3>
+        <p class="muted">Exactly what you see when Sift Mail boots.</p>
+        <div class="snapshot">
+          <div class="snapshot-row"><span>Accounts synced</span><strong>Personal · Work · Finance</strong></div>
+          <div class="snapshot-row"><span>Spam neutralized</span><strong>47 today</strong></div>
+          <div class="snapshot-row"><span>Phishing quarantined</span><strong>3 flagged for review</strong></div>
+          <div class="snapshot-row"><span>Quick archive suggestions</span><strong>12 newsletters</strong></div>
+        </div>
+        <div class="snippet-preview">
+          <h4>High-value spotlight</h4>
+          <article class="snippet">
+            <header>
+              <span class="sender">Jordan – Acme Capital</span>
+              <span class="badge">Finance</span>
+            </header>
+            <strong>Series B term sheet updates</strong>
+            <p>"We incorporated your latest feedback and attached the revised schedule. Let’s lock signatures before Friday."</p>
+          </article>
+        </div>
         <div class="badges">
           <span class="badge">Explainable</span>
           <span class="badge">Reversible</span>
@@ -59,18 +87,104 @@
 
   <section class="section" id="learn">
     <div class="container">
-      <div class="features">
+      <h2>Every email where it belongs</h2>
+      <p class="muted section-lead">Multi-engine intelligence sorts intent, risk, and urgency across every account you connect.</p>
+      <div class="pillars">
         <div class="card">
-          <h3>Multi‑engine defense</h3>
-          <p class="muted">Headers, domain intel, LLM content analysis, OCR/QR, and link forensics work together to catch what default filters miss.</p>
+          <h3>Precision spam defense</h3>
+          <p class="muted">LLM content analysis, signal stacking, and feedback loops slash spam and graymail without nuking important threads.</p>
         </div>
         <div class="card">
-          <h3>Explainable actions</h3>
-          <p class="muted">Every move has a reason badge (SPF/DKIM, homograph, domain age, anomaly heuristics) so users trust the system.</p>
+          <h3>Phishing shield</h3>
+          <p class="muted">Header forensics, link detonation, and identity graphing surface phishing attempts before they reach your focus view.</p>
         </div>
         <div class="card">
-          <h3>Reversible by default</h3>
-          <p class="muted">Nothing disappears. Messages go to a 30‑day quarantine with one‑click restore that also retrains the model.</p>
+          <h3>Intent categories</h3>
+          <p class="muted">Finance, travel, commitments, community, and more are auto-labeled so your workflow stays organized without manual filters.</p>
+        </div>
+        <div class="card">
+          <h3>Zero-friction recovery</h3>
+          <p class="muted">One-click undo on every automated action keeps trust high and trains the classifier with your preferences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container split">
+      <div>
+        <h2>High-value emails summarized instantly</h2>
+        <p class="muted">The moment you log in, Sift Mail distills the five highest impact emails into rich snippets so you know exactly what needs action.</p>
+        <ul class="feature-list">
+          <li>Detects commitments, approvals, and sensitive deadlines.</li>
+          <li>Summaries include sender context, key ask, and suggested next steps.</li>
+          <li>Mark as done, delegate, or schedule follow-up without opening the thread.</li>
+        </ul>
+      </div>
+      <div class="card snippet-card">
+        <div class="snippet-head">
+          <span class="badge">High value</span>
+          <span class="muted">2 min to act</span>
+        </div>
+        <h3>Board packet review – Friday 9am</h3>
+        <p>"Here’s the condensed deck with notes on the hiring plan and runway scenarios. Reply with your approval or requested edits."</p>
+        <div class="snippet-actions">
+          <span class="chip">Approve</span>
+          <span class="chip">Request edit</span>
+          <span class="chip">Remind me</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Command center for every inbox you own</h2>
+      <p class="muted section-lead">Sync personal, work, and shared mailboxes in a single calm view with unified search and consistent controls.</p>
+      <div class="accounts-grid">
+        <div class="card account-card">
+          <h3>Unified timeline</h3>
+          <p class="muted">See a prioritized queue that merges all accounts while keeping compliance boundaries intact.</p>
+        </div>
+        <div class="card account-card">
+          <h3>Profile-aware settings</h3>
+          <p class="muted">Different notification cadences, signature rules, and archive automations per account.</p>
+        </div>
+        <div class="card account-card">
+          <h3>Shared mailbox support</h3>
+          <p class="muted">Assign owners, leave internal notes, and escalate suspicious messages to security teams.</p>
+        </div>
+        <div class="card account-card">
+          <h3>Calendar + tasks</h3>
+          <p class="muted">Pull action items into your agenda so follow-ups never slip through the cracks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <h2>The path to inbox zero (and keeping it there)</h2>
+      <div class="timeline">
+        <div class="timeline-step">
+          <span class="step-number">01</span>
+          <h3>Connect your accounts</h3>
+          <p class="muted">OAuth onboarding links Gmail, Outlook, and IMAP in minutes with enterprise-grade OAuth scopes.</p>
+        </div>
+        <div class="timeline-step">
+          <span class="step-number">02</span>
+          <h3>Instant historical sweep</h3>
+          <p class="muted">We retro-classify the last 90 days, clear spam, and surface unresolved commitments.</p>
+        </div>
+        <div class="timeline-step">
+          <span class="step-number">03</span>
+          <h3>Daily digest & nudges</h3>
+          <p class="muted">Morning briefings show summaries, while nudges keep you at zero with one-click triage suggestions.</p>
+        </div>
+        <div class="timeline-step">
+          <span class="step-number">04</span>
+          <h3>Continuous learning</h3>
+          <p class="muted">Every action updates preferences so the platform keeps getting calmer and more personal.</p>
         </div>
       </div>
     </div>
