@@ -1,0 +1,25 @@
+{
+  "name": "siftmail-monorepo",
+  "private": true,
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "install": "npm install --workspaces",
+    "dev:backend": "uvicorn app.main:app --app-dir backend/app --host 0.0.0.0 --port ${BACKEND_PORT:-8000}",
+    "dev:frontend": "npm run dev --workspace @siftmail/frontend",
+    "dev": "npm-run-all --parallel dev:backend dev:frontend",
+    "lint:backend": "cd backend && ruff check app tests",
+    "lint:frontend": "npm run lint --workspace @siftmail/frontend",
+    "lint": "npm-run-all lint:backend lint:frontend",
+    "test:backend": "cd backend && pytest",
+    "test:frontend": "npm test --workspace @siftmail/frontend",
+    "test": "npm-run-all test:backend test:frontend",
+    "build:backend": "cd backend && python -m compileall app",
+    "build:frontend": "npm run build --workspace @siftmail/frontend",
+    "build": "npm-run-all build:backend build:frontend"
+  },
+  "devDependencies": {
+    "npm-run-all": "4.1.5"
+  }
+}

@@ -1,30 +1,21 @@
+# SiftMail frontend
 
-# Sift Mail — Frontend (Static)
+Next.js application that exposes the SiftMail console and live classifier demo.
 
-This is the production-ready static frontend for Sift Mail.
+## Scripts
+- `npm run dev` – start dev server at http://localhost:3000
+- `npm run build` – production build in `.next`
+- `npm run start` – serve the production build
+- `npm run lint` – `next lint` using the default Next.js ESLint config
 
-## Structure
-- `index.html` — Landing page with CTA (“Connect Gmail”) and waitlist form.
-- `styles.css` — Dark, brand-consistent styles.
-- `app.js` — JS with `API_BASE` for your backend (`/auth/start` route).
-- `data-policy.html`, `privacy.html`, `terms.html` — Legal pages.
-- `assets/logo.svg` — Simple wordmark.
+## Configuration
+The frontend reads the backend URL from `NEXT_PUBLIC_API_BASE_URL` (see `.env.example`). During local development it defaults to `http://localhost:8000`.
 
-## Configure
-In `app.js`, set the API base for your environment:
-```js
-// For local dev:
-localStorage.setItem('API_BASE','http://localhost:8080');
-// For production (example):
-// localStorage.setItem('API_BASE','https://api.siftmail.app');
-```
+## Pages
+- `/` – marketing splash with live classifier + batch tester
+- `/app` – operations console/health
+- `/app/batch` – batch JSON classifier
+- `/app/messages` – example verdict log
+- `/auth`, `/privacy`, `/data-policy`, `/terms` – supporting documentation
 
-## Deploy (Netlify)
-1. Push this folder to GitHub (public or private).
-2. In Netlify, “Deploy with GitHub” → select the repo → **No build command** (static).
-3. Publish directory: the repository root.
-4. Connect your domain and go live.
-
-## Notes
-- Replace the Formspree endpoint in `app.js` with your real waitlist endpoint.
-- The “Connect Gmail” button calls `${API_BASE}/auth/start`.
+Deployment guidance lives in `docs/deployment.md`.
