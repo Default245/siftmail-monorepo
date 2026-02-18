@@ -4,7 +4,7 @@
 - **Container build:**
   ```bash
   docker build -t siftmail-backend -f backend/Dockerfile .
-  docker run -p 8000:8000 --env-file .env siftmail-backend
+  docker run -p 8000:8000 --env-file .env -e PORT=8000 siftmail-backend
   ```
 - **Procfile:** `web: uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}` works on Heroku/Railway style platforms.
 - **Environment:** ensure the variables from `.env.example` are set (`APP_ENV`, `BACKEND_PORT`, `CORS_ORIGINS`, `CLASSIFICATION_THRESHOLD`, keyword/domain lists).
@@ -22,7 +22,7 @@
 ## CI expectations
 GitHub Actions (`.github/workflows/mono-ci.yml`) runs on every push/PR:
 - Backend: install deps → ruff lint → pytest → byte-compile
-- Frontend: npm install → `next lint` → `next build`
+- Frontend: workspace npm install → `next lint` → `npm run test` → `next build`
 
 ## Manual deployment flow
 1. Provision a container app (Railway/Render/Heroku) for the backend using `backend/Dockerfile` or `Procfile`.

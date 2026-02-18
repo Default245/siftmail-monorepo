@@ -18,3 +18,9 @@ SiftMail is an AI-backed email defense layer built as a FastAPI backend and a Ne
 - `backend/`: FastAPI app, classification logic, tests, Dockerfile, Procfile
 - `frontend/`: Next.js app with live classifier UI and policy pages
 - `docs/`: project documentation
+
+
+**Delivery milestones (preserved)**
+- Iteration 1: monorepo baseline and runnable backend service.
+- Iteration 2: frontend experience and API integration for message scoring.
+- Iteration 3: CI/CD, deployment hardening, and operational documentation for MVP readiness.

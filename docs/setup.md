@@ -33,7 +33,7 @@
      ```
    - Or run individually:
      ```bash
-     npm run dev:backend  # FastAPI on http://localhost:8000
+     npm run dev:backend  # FastAPI on http://localhost:8000 (loads backend/app/main.py)
      npm run dev:frontend # Next.js on http://localhost:3000
      ```
 
