@@ -1,0 +1,1 @@
+"""SiftMail backend application package."""
